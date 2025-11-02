@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import servicio_concesionarias
 
 class ServicioClientes:
@@ -17,10 +16,3 @@ class ServicioClientes:
                     total += venta.obtener_monto()
 
         return total
-=======
-class ServicioClientes:
-
-    def obtener_total_ventas_por_cliente(self, concesionaria_id, cliente_id):
-        
-        pass
->>>>>>> origin/main

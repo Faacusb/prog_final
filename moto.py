@@ -14,7 +14,6 @@ class Moto(vehiculo.Vehiculo):
 
     def obtener_cilindrada(self):
         return self.__cilindrada
-<<<<<<< HEAD
     
     
     def __str__(self):
@@ -22,5 +21,3 @@ class Moto(vehiculo.Vehiculo):
                 f"modelo='{self.obtener_modelo()}', anio={self.obtener_anio()}, "
                 f"sucursal_id={self.obtener_sucursal_id()}, estado_id={self.obtener_estado_id()}, "
                 f"cilindrada={self.__cilindrada})")
-=======
->>>>>>> origin/main

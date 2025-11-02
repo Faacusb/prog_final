@@ -1,17 +1,10 @@
 import json
 import concesionaria
 import moto
-<<<<<<< HEAD
 import auto
 import cliente
 import sucursal
 import venta
-=======
-import autoM
-import clienteM
-import sucursal
-import ventaM
->>>>>>> origin/main
 
 
 class ServicioConcesionarias:
@@ -39,11 +32,7 @@ class ServicioConcesionarias:
 
         clientes = objeto.get("clientes")
         for cli in clientes:
-<<<<<<< HEAD
             cliente_registro = cliente.Cliente(
-=======
-            cliente_registro = clienteM.Cliente(
->>>>>>> origin/main
                 cli.get("numero_id"),
                 cli.get("nombres"),
                 cli.get("apellidos"),
@@ -56,11 +45,7 @@ class ServicioConcesionarias:
         for veh in vehiculos:
             match veh.get("tipo"):
                 case "auto":
-<<<<<<< HEAD
                     vehiculo_registro = auto.Auto(
-=======
-                    vehiculo_registro = autoM.Auto(
->>>>>>> origin/main
                         veh.get("numero_id"),
                         veh.get("marca"),
                         veh.get("modelo"),
@@ -94,11 +79,7 @@ class ServicioConcesionarias:
             ventas = suc.get("ventas")
 
             for ven in ventas:
-<<<<<<< HEAD
                 venta_registro = venta.Venta(
-=======
-                venta_registro = ventaM.Venta(
->>>>>>> origin/main
                     ven.get("numero_id"),
                     ven.get("fecha"),
                     ven.get("cliente_id"),

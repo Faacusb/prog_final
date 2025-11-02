@@ -45,7 +45,6 @@ class Concesionaria:
 
     def obtener_vehiculos(self):
         return self.__vehiculos
-<<<<<<< HEAD
     
     def __eq__(self, other):
         return isinstance(other, Concesionaria) and self.__numero_id == other.__numero_id
@@ -59,5 +58,3 @@ class Concesionaria:
             f"Clientes:\n{clientes_str}\n"
             f"Sucursales:\n{sucursales_str}\n"
             f"Vehiculos:\n{vehiculos_str}")
-=======
->>>>>>> origin/main

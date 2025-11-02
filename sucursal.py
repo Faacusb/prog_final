@@ -4,7 +4,6 @@ class Sucursal:
         self.__direccion = direccion
         self.__ventas = []
 
-<<<<<<< HEAD
 
     def establecer_numero_id(self, numero_id):
         self.__numero_id = numero_id
@@ -34,25 +33,3 @@ class Sucursal:
         ventas_str = ", ".join(str(v) for v in self.__ventas) if self.__ventas else "sin ventas"
         return (f"Sucursal(id={self.__numero_id}, direccion='{self.__direccion}', "
                 f"ventas=[{ventas_str}])")
-=======
-    def establecerNumeroId(self, numero_id):
-        self.__numero_id = numero_id
-
-    def establecerDireccion(self, direccion):
-        self.direccion = direccion
-
-    def agregarVenta(self, venta):
-        self.__ventas.append(venta)
-
-    def removerVenta(self, venta):
-        self.__ventas.remove(venta)
-
-    def obtenerNumeroId(self):
-        return self.__numero_id
-
-    def obtenerDireccion(self):
-        return self.__direccion
-
-    def obtenerVentas(self):
-        return self.__ventas
->>>>>>> origin/main
