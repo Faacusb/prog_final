@@ -1,3 +1,4 @@
+#Ejercicio 3
 import vehiculo
 
 class Auto(vehiculo.Vehiculo):
@@ -7,7 +8,7 @@ class Auto(vehiculo.Vehiculo):
         self.__frenos_abs = frenos_abs
         self.__caballos_fuerza = caballos_fuerza
 
-
+#Comandos
     def establecer_airbags(self, airbags):
         self.__airbags = airbags
 
@@ -16,7 +17,7 @@ class Auto(vehiculo.Vehiculo):
 
     def establecer_caballos_fuerza(self, caballos_fuerza):
         self.__caballos_fuerza = caballos_fuerza
-
+#Consultas
     def obtener_airbags(self):
         return self.__airbags
 
@@ -26,7 +27,7 @@ class Auto(vehiculo.Vehiculo):
     def obtener_caballos_fuerza(self):
         return self.__caballos_fuerza
 
-
+#Ejercicio 5
 
     def __str__(self):
         return (f"Auto(id={self.obtener_numero_id()}, marca='{self.obtener_marca()}', "

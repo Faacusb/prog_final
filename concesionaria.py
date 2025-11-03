@@ -45,7 +45,7 @@ class Concesionaria:
 
     def obtener_vehiculos(self):
         return self.__vehiculos
-    
+#Ejercicio 5    
     def __eq__(self, other):
         return isinstance(other, Concesionaria) and self.__numero_id == other.__numero_id
 

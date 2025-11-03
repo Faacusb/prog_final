@@ -1,3 +1,4 @@
+#Ejercicio 2
 class Cliente:
     def __init__(self, numero_id, nombre, apellidos, email):
         self.__numero_id = numero_id
@@ -5,8 +6,7 @@ class Cliente:
         self.__apellidos = apellidos
         self.__email = email
 
-
-
+#Comandos
     def establecer_numero_id(self, numero_id):
         self.__numero_id = numero_id
 
@@ -19,8 +19,7 @@ class Cliente:
     def establecer_email(self, email):
         self.__email = email
 
-
-
+#Consultas
     def obtener_numero_id(self):
         return self.__numero_id
 
@@ -33,7 +32,7 @@ class Cliente:
     def obtener_email(self):
         return self.__email
 
-
+#Ejercicio 5
     def __eq__(self, other):
         return isinstance(other, Cliente) and self.__numero_id == other.__numero_id
 

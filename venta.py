@@ -1,3 +1,4 @@
+#Ejercicio 4
 class Venta:
     def __init__(self, numero_id, fecha, cliente_id, vehiculo_id, monto):
         self.__numero_id = numero_id
@@ -5,7 +6,7 @@ class Venta:
         self.__cliente_id = cliente_id
         self.__vehiculo_id = vehiculo_id
         self.__monto = monto
-
+#Comandos
     def establecer_numero_id(self, numero_id):
         self.__numero_id = numero_id
 
@@ -21,8 +22,7 @@ class Venta:
     def establecer_monto(self, monto):
         self.__monto = monto
 
-
-
+#Consultas
     def obtener_numero_id(self):
         return self.__numero_id
 
@@ -37,9 +37,8 @@ class Venta:
 
     def obtener_monto(self):
         return self.__monto
-    
-    
-
+  
+#Ejercicio 5
     def __eq__(self, other):
         return isinstance(other, Venta) and self.__numero_id == other.__numero_id
 
