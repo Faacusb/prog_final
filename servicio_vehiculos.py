@@ -2,7 +2,6 @@
 import servicio_concesionarias
 
 class ServicioVehiculos:
-
     def obtener_vehiculos_por_sucursal_y_estado(self, concesionaria_id, sucursal_id, estado_id):
         servicio_concesionarias_obj = servicio_concesionarias.ServicioConcesionarias()
         concesionaria = servicio_concesionarias_obj.obtener_por_id(concesionaria_id)
