@@ -2,26 +2,21 @@
 import servicio_concesionarias
 
 class ServicioVehiculos:
-    def __init__(self):
-        self.__servicio_concesionarias = servicio_concesionarias.ServicioConcesionarias()
 
-    def obtenerVehiculosPorSucursalYEstado(self, concesionariaID, sucursalID, estadoID):
-        concesionaria = self.__servicio_concesionarias.obtenerPorId(concesionariaID)
-        if concesionaria is None or not hasattr(concesionaria, "obtener_sucursales"):
+    def obtener_vehiculos_por_sucursal_y_estado(self, concesionaria_id, sucursal_id, estado_id):
+        servicio_concesionarias_obj = servicio_concesionarias.ServicioConcesionarias()
+        concesionaria = servicio_concesionarias_obj.obtener_por_id(concesionaria_id)
+        if concesionaria is None:
             return []
 
-        sucursal_obj = None
-        for sucursal in concesionaria.obtener_sucursales():
-            if hasattr(sucursal, "obtener_numero_id") and sucursal.obtener_numero_id() == sucursalID:
-                sucursal_obj = sucursal
-                break
-
-        if sucursal_obj is None or not hasattr(sucursal_obj, "obtener_vehiculos"):
-            return []
+        concesionaria_id = int(concesionaria_id)
+        sucursal_id = int(sucursal_id)
+        estado_id = int(estado_id)
 
         vehiculos_filtrados = []
-        for vehiculo in sucursal_obj.obtener_vehiculos():
-            if hasattr(vehiculo, "obtener_estado_id") and vehiculo.obtener_estado_id() == estadoID:
+
+        for vehiculo in concesionaria.obtener_vehiculos():
+            if vehiculo.obtener_sucursal_id() == sucursal_id and vehiculo.obtener_estado_id() == estado_id:
                 vehiculos_filtrados.append(vehiculo)
 
         return vehiculos_filtrados

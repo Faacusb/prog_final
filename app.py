@@ -55,3 +55,6 @@ def obtener_vehiculos(concesionaria_id, sucursal_id):
     )
 
     return f"<pre>{texto_respuesta}</pre>", 200
+
+if __name__ == "__main__":
+    app.run(debug=True)
