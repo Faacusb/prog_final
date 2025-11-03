@@ -15,7 +15,7 @@ class Moto(vehiculo.Vehiculo):
     def obtener_cilindrada(self):
         return self.__cilindrada
     
-    
+#Ejercicio 5    
     def __str__(self):
         return (f"Moto(id={self.obtener_numero_id()}, marca='{self.obtener_marca()}', "
                 f"modelo='{self.obtener_modelo()}', anio={self.obtener_anio()}, "

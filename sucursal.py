@@ -1,10 +1,11 @@
+#Ejercicio 1
 class Sucursal:
     def __init__(self, numero_id, direccion):
         self.__numero_id = numero_id
         self.__direccion = direccion
         self.__ventas = []
 
-
+#Comandos
     def establecer_numero_id(self, numero_id):
         self.__numero_id = numero_id
 
@@ -16,7 +17,7 @@ class Sucursal:
 
     def remover_venta(self, venta):
         self.__ventas.remove(venta)
-
+#Consultas
     def obtener_numero_id(self):
         return self.__numero_id
 
@@ -25,7 +26,7 @@ class Sucursal:
 
     def obtener_ventas(self):
         return self.__ventas
-
+#Ejercicio 5
     def __eq__(self, other):
         return isinstance(other, Sucursal) and self.__numero_id == other.__numero_id
 
